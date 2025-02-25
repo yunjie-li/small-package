@@ -779,7 +779,6 @@ return view.extend({
 						// led_name
 						o = ss.taboption('led' + i + '_tab', form.ListValue, 'mod_led_control_led' + i + '_name',
 							_('<abbr title="Light Emitting Diode">LED</abbr> Name'));
-						o.depends({ mod_led_control_enabled: '1' });
 						o.modalonly = true;
 						if(i > 1) {
 							o.rmempty  = true;
@@ -873,7 +872,7 @@ return view.extend({
 				// dead_period
 				o = s.taboption('restart_network', this.CBITimeInput,
 					'mod_network_restart_dead_period', _('Dead period'),
-					_('Period of time without Internet access before network restart.')
+					_('Period of time without Internet access before network restart or between restart attempts.')
 				);
 				o.default   = '900';
 				o.rmempty   = false;
